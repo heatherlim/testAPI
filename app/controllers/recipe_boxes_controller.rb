@@ -1,0 +1,2 @@
+class RecipeBoxesController < ApplicationController
+end
