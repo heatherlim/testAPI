@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/api/users', to:'users#index'
   get '/api/recipe_boxes', to:'recipe_boxes#index'
   get '/api/recipes', to:'recipes#index'
+  get '/api/recipes/:id', to: 'recipes#show'
   get '/api/ingredients', to:'ingredients#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
