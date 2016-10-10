@@ -1,1 +1,93 @@
-asdf
+<h1>Demo API Documentation</h1>
+
+<div class = "content">
+  <p>
+  Hello there, this is my simple food-themed API demo that I made to accompany a blog post I wrote regarding RESTful APIs. You can view the code for it over <a href = "https://github.com/heatherlim/testAPI"> here</a>.
+  <br><br>
+  This API only allows the retrieval of data. When a GET request is made, it will respond with JSON. For example, if this request is made:<br><br>
+  GET simpledemoapi.herokuapp.com/api/recipes/1
+  <br><br>
+  The API will respond with:
+  <pre><code>
+    {
+      id: 1,
+      name: "Ice",
+      ingredients: [
+        {
+          id: 1,
+          name: "Water"
+        },
+        {
+          id: 2,
+          name: "Eggs"
+        }
+      ]
+    }
+  </code></pre>
+  As is common knowledge, to make ice, we would need water and eggs.
+  </p>
+  
+  <p>
+    <h2>Calling for User Information</h2>
+    You can call for a list of all users or filter by their id.
+    <br><br>
+    <strong>API Calls:</strong>
+    <br><br>
+    GET simpledemoapi.herokuapp.com/api/users
+    <br>
+    GET simpledemoapi.herokuapp.com/api/users/{id}
+    <br><br>
+    <strong>Examples:</strong>
+    <br><br>
+    GET <%=link_to('simpledemoapi.herokuapp.com/api/users', users_path)%>
+    <br>
+    GET <%=link_to('simpledemoapi.herokuapp.com/api/users/1', user_path(1))%>
+  </p>
+  <br>
+  <p>
+    <h2>Calling for Recipe Box Information</h2>
+    A user will have multiple recipe boxes they can use to store their recipes. You can call for a list of recipe boxes and query based on a user's ID.
+    <br><br>
+    <strong>API Calls:</strong>
+    <br><br>
+    GET simpledemoapi.herokuapp.com/api/recipe_boxes
+    <br>
+    GET simpledemoapi.herokuapp.com/api/recipe_boxes?user_id={id}
+    <br><br>
+    <strong>Examples:</strong>
+    <br><br>
+    GET <%=link_to('simpledemoapi.herokuapp.com/api/recipe_boxes', recipe_boxes_path)%>
+    <br>
+    GET <%=link_to('simpledemoapi.herokuapp.com/api/recipe_boxes?user_id=1', recipe_boxes_path(user_id:1))%>
+  </p>
+  <br>
+  <p>
+    <h2>Calling for Recipe Information</h2>
+    You can call for a list of all recipes or filter by a recipe's ID.
+    <br><br>
+    <strong>API Calls:</strong>
+    <br><br>
+    GET simpledemoapi.herokuapp.com/api/recipes
+    <br>
+    GET simpledemoapi.herokuapp.com/api/recipes/{id}
+    <br><br>
+    <strong>Examples:</strong>
+    <br><br>
+    GET <%=link_to('simpledemoapi.herokuapp.com/api/recipes', recipes_path)%>
+    <br>
+    GET <%=link_to('simpledemoapi.herokuapp.com/api/recipes/1', recipe_path(1))%>
+  </p>
+  <br>
+  <p>
+    <h2>Calling for Ingredient Information</h2>
+    You can call for a list of all ingredients.
+    <br><br>
+    <strong>API Calls:</strong>
+    <br><br>
+    GET simpledemoapi.herokuapp.com/api/ingredients
+    <br><br>
+    <strong>Examples:</strong>
+    <br><br>
+    GET <%=link_to('simpledemoapi.herokuapp.com/api/ingredients', ingredients_path)%>
+  </p>
+</div>
