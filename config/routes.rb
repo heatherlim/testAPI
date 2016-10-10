@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  root 'pages#index'
+  
   scope '/api' do
     get '/users', to:'users#index'
     
